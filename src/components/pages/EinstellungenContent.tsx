@@ -1,19 +1,19 @@
 ﻿"use client";
 
 import {
-  ScaleCard,
-  ScaleSwitch,
-  ScaleSlider,
-  ScaleDropdownSelect,
-  ScaleDropdownSelectItem,
-  ScaleDivider,
+  ScaleAlert,
   ScaleButton,
-  ScaleTextField,
+  ScaleCard,
   ScaleCheckbox,
   ScaleCheckboxGroup,
-  ScaleAlert,
+  ScaleDivider,
+  ScaleDropdownSelect,
+  ScaleDropdownSelectItem,
   ScaleRadioButton,
   ScaleRadioButtonGroup,
+  ScaleSlider,
+  ScaleSwitch,
+  ScaleTextField,
 } from "@telekom/scale-components-react";
 import { useState } from "react";
 
@@ -131,9 +131,7 @@ export default function EinstellungenContent() {
 
         <div className="flex gap-4 justify-end">
           <ScaleButton variant="secondary">Abbrechen</ScaleButton>
-          <ScaleButton onClick={() => setSaved(true)}>
-            Speichern
-          </ScaleButton>
+          <ScaleButton onClick={() => setSaved(true)}>Speichern</ScaleButton>
         </div>
       </div>
     </div>

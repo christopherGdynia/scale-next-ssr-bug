@@ -2,9 +2,12 @@
 
 import dynamic from "next/dynamic";
 
-const DashboardContent = dynamic(() => import("@/components/pages/DashboardContent"), {
-  ssr: false,
-});
+const DashboardContent = dynamic(
+  () => import("@/components/pages/DashboardContent"),
+  {
+    ssr: false,
+  },
+);
 
 export default function DashboardPage() {
   return <DashboardContent />;

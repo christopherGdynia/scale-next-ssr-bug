@@ -1,12 +1,12 @@
 ﻿"use client";
 
 import {
-  ScaleCard,
+  ScaleBadge,
   ScaleButton,
-  ScaleTag,
+  ScaleCard,
   ScaleDivider,
   ScaleRatingStars,
-  ScaleBadge,
+  ScaleTag,
 } from "@telekom/scale-components-react";
 
 const products = [
@@ -62,9 +62,15 @@ export default function ProdukteContent() {
 
       <div className="flex flex-wrap gap-3 mb-8">
         <ScaleButton size="small">Alle</ScaleButton>
-        <ScaleButton size="small" variant="secondary">Internet</ScaleButton>
-        <ScaleButton size="small" variant="secondary">Mobil</ScaleButton>
-        <ScaleButton size="small" variant="secondary">TV</ScaleButton>
+        <ScaleButton size="small" variant="secondary">
+          Internet
+        </ScaleButton>
+        <ScaleButton size="small" variant="secondary">
+          Mobil
+        </ScaleButton>
+        <ScaleButton size="small" variant="secondary">
+          TV
+        </ScaleButton>
       </div>
 
       <ScaleDivider className="mb-8" />

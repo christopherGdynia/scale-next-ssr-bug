@@ -1,21 +1,21 @@
 ﻿"use client";
 
-import { useState } from "react";
 import {
+  ScaleAlert,
   ScaleButton,
-  ScaleTextField,
-  ScaleTextarea,
+  ScaleCard,
   ScaleCheckbox,
-  ScaleRadioButton,
-  ScaleRadioButtonGroup,
+  ScaleDatePicker,
+  ScaleDivider,
   ScaleDropdownSelect,
   ScaleDropdownSelectItem,
-  ScaleDatePicker,
+  ScaleRadioButton,
+  ScaleRadioButtonGroup,
   ScaleSwitch,
-  ScaleCard,
-  ScaleDivider,
-  ScaleAlert,
+  ScaleTextField,
+  ScaleTextarea,
 } from "@telekom/scale-components-react";
+import { useState } from "react";
 
 export default function FormulareContent() {
   const [submitted, setSubmitted] = useState(false);

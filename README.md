@@ -43,11 +43,12 @@ import dynamic from "next/dynamic";
 
 const DashboardContent = dynamic(
   () => import("@/components/pages/DashboardContent"),
-  { ssr: false }
+  { ssr: false },
 );
 ```
 
 Das bewirkt:
+
 - Das Modul wird **ausschließlich im Browser** geladen
 - Beim SSR/Build wird die Komponente übersprungen
 - Die Scale-Components funktionieren korrekt, da `document` im Browser verfügbar ist

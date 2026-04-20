@@ -1,12 +1,12 @@
 ﻿"use client";
 
 import {
-  ScaleCard,
-  ScaleTag,
-  ScaleDivider,
-  ScaleButton,
   ScaleAccordion,
+  ScaleButton,
+  ScaleCard,
   ScaleCollapsible,
+  ScaleDivider,
+  ScaleTag,
 } from "@telekom/scale-components-react";
 
 const teamMembers = [
@@ -57,15 +57,18 @@ const teamMembers = [
 const faqs = [
   {
     question: "Wie kann ich dem Team beitreten?",
-    answer: "Bewerbungen können über unser Karriereportal eingereicht werden. Offene Stellen werden regelmäßig aktualisiert.",
+    answer:
+      "Bewerbungen können über unser Karriereportal eingereicht werden. Offene Stellen werden regelmäßig aktualisiert.",
   },
   {
     question: "Wie ist das Team organisiert?",
-    answer: "Wir arbeiten in cross-funktionalen Squads nach dem agilen Framework. Jedes Squad hat einen Product Owner und Scrum Master.",
+    answer:
+      "Wir arbeiten in cross-funktionalen Squads nach dem agilen Framework. Jedes Squad hat einen Product Owner und Scrum Master.",
   },
   {
     question: "Welche Technologien werden eingesetzt?",
-    answer: "Primär Next.js, React, TypeScript im Frontend und Node.js mit PostgreSQL im Backend. Deployment über AWS und Kubernetes.",
+    answer:
+      "Primär Next.js, React, TypeScript im Frontend und Node.js mit PostgreSQL im Backend. Deployment über AWS und Kubernetes.",
   },
 ];
 

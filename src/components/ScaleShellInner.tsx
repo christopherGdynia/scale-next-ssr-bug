@@ -1,14 +1,14 @@
 ﻿"use client";
 
-import { useEffect, useState } from "react";
 import {
-  ScaleTelekomHeader,
-  ScaleTelekomNavItem,
   ScaleTelekomFooter,
   ScaleTelekomFooterContent,
+  ScaleTelekomHeader,
+  ScaleTelekomNavItem,
 } from "@telekom/scale-components-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const navItems = [
   { href: "/", label: "Startseite" },
@@ -19,7 +19,11 @@ const navItems = [
   { href: "/einstellungen", label: "Einstellungen" },
 ];
 
-export default function ScaleShellInner({ children }: { children: React.ReactNode }) {
+export default function ScaleShellInner({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const pathname = usePathname();
   const [ready, setReady] = useState(false);
 
@@ -37,7 +41,10 @@ export default function ScaleShellInner({ children }: { children: React.ReactNod
       <ScaleTelekomHeader appName="Scale Demo" appNameLink="/">
         <nav slot="main-nav">
           {navItems.map((item) => (
-            <ScaleTelekomNavItem key={item.href} active={pathname === item.href}>
+            <ScaleTelekomNavItem
+              key={item.href}
+              active={pathname === item.href}
+            >
               <Link href={item.href}>{item.label}</Link>
             </ScaleTelekomNavItem>
           ))}
@@ -50,9 +57,15 @@ export default function ScaleShellInner({ children }: { children: React.ReactNod
             © Deutsche Telekom AG {new Date().getFullYear()}
           </span>
           <ul slot="navigation">
-            <li><a href="#">Impressum</a></li>
-            <li><a href="#">Datenschutz</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li>
+              <a href="#">Impressum</a>
+            </li>
+            <li>
+              <a href="#">Datenschutz</a>
+            </li>
+            <li>
+              <a href="#">Kontakt</a>
+            </li>
           </ul>
         </ScaleTelekomFooterContent>
       </ScaleTelekomFooter>

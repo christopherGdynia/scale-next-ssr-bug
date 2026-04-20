@@ -6,6 +6,10 @@ const ScaleShellInner = dynamic(() => import("./ScaleShellInner"), {
   ssr: false,
 });
 
-export default function ScaleShell({ children }: { children: React.ReactNode }) {
+export default function ScaleShell({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <ScaleShellInner>{children}</ScaleShellInner>;
 }
