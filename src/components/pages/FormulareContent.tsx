@@ -50,7 +50,7 @@ export default function FormulareContent() {
                 setSubmitted(true);
               }}
             >
-              <ScaleTextField label="Vorname" required />
+              <ScaleTextField label="Vorname" onScaleBlur={() => {console.log("test")}} required />
               <ScaleTextField label="Nachname" required />
               <ScaleTextField label="E-Mail" type="email" required />
               <ScaleTextField label="Telefon" type="tel" />

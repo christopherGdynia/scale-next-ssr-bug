@@ -1,10 +1,6 @@
 ﻿"use client";
 
-import dynamic from "next/dynamic";
-
-const TeamContent = dynamic(() => import("@/components/pages/TeamContent"), {
-  ssr: false,
-});
+import TeamContent from "@/components/pages/TeamContent";
 
 export default function TeamPage() {
   return <TeamContent />;

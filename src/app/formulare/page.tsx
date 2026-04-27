@@ -1,13 +1,6 @@
 ﻿"use client";
 
-import dynamic from "next/dynamic";
-
-const FormulareContent = dynamic(
-  () => import("@/components/pages/FormulareContent"),
-  {
-    ssr: false,
-  },
-);
+import FormulareContent from "@/components/pages/FormulareContent";
 
 export default function FormularePage() {
   return <FormulareContent />;

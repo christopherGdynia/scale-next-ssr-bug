@@ -99,7 +99,7 @@ export default function TeamContent() {
               <p className="text-sm text-gray-500 mb-3">{member.email}</p>
               <div className="flex flex-wrap gap-2">
                 {member.skills.map((skill) => (
-                  <ScaleTag key={skill} size="small" variant="strong">
+                  <ScaleTag key={skill} size="small" onScaleClose={} variant="strong">
                     {skill}
                   </ScaleTag>
                 ))}

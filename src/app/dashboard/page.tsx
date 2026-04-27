@@ -1,13 +1,6 @@
 ﻿"use client";
 
-import dynamic from "next/dynamic";
-
-const DashboardContent = dynamic(
-  () => import("@/components/pages/DashboardContent"),
-  {
-    ssr: false,
-  },
-);
+import DashboardContent from "@/components/pages/DashboardContent";
 
 export default function DashboardPage() {
   return <DashboardContent />;

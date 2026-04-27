@@ -1,13 +1,6 @@
 ﻿"use client";
 
-import dynamic from "next/dynamic";
-
-const ProdukteContent = dynamic(
-  () => import("@/components/pages/ProdukteContent"),
-  {
-    ssr: false,
-  },
-);
+import ProdukteContent from "@/components/pages/ProdukteContent";
 
 export default function ProduktePage() {
   return <ProdukteContent />;
