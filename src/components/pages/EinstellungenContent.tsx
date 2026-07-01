@@ -28,11 +28,7 @@ export default function EinstellungenContent() {
       </p>
 
       {saved && (
-        <ScaleAlert
-          variant="success"
-          opened
-          className="mb-6"
-        >
+        <ScaleAlert variant="success" opened className="mb-6">
           Einstellungen erfolgreich gespeichert!
         </ScaleAlert>
       )}

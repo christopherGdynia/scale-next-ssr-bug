@@ -18,8 +18,14 @@ The generated `components.d.ts` declares components with only 2 type parameters:
 
 ```ts
 // ❌ Current (broken) — components.d.ts
-export declare const ScaleAlert: StencilReactComponent<ScaleAlertElement, ScaleAlertEvents>;
-export declare const ScaleButton: StencilReactComponent<ScaleButtonElement, ScaleButtonEvents>;
+export declare const ScaleAlert: StencilReactComponent<
+  ScaleAlertElement,
+  ScaleAlertEvents
+>;
+export declare const ScaleButton: StencilReactComponent<
+  ScaleButtonElement,
+  ScaleButtonEvents
+>;
 ```
 
 But `StencilReactComponent` from `@stencil/react-output-target/runtime` expects **3** type parameters:
@@ -29,14 +35,16 @@ But `StencilReactComponent` from `@stencil/react-output-target/runtime` expects 
 export type StencilReactComponent<
   Element extends HTMLElement,
   Events extends EventNames = {},
-  Props = {}  // ← this third parameter carries the actual component props
+  Props = {}, // ← this third parameter carries the actual component props
 > = React.FunctionComponent<StencilProps<Element, Events, Props>>;
 ```
 
 Since the third `Props` generic defaults to `{}`, all component-specific props (`variant`, `label`, `size`, `opened`, `percentage`, `checked`, etc.) are lost. The type resolves to:
 
 ```ts
-Omit<React.HTMLAttributes<ScaleAlertElement>, never> & Partial<{}> & React.RefAttributes<ScaleAlertElement>
+Omit<React.HTMLAttributes<ScaleAlertElement>, never> &
+  Partial<{}> &
+  React.RefAttributes<ScaleAlertElement>;
 // Only standard HTML attributes — no Scale-specific props
 ```
 
@@ -56,7 +64,11 @@ export type ScaleAlertProps = {
   styles?: string;
 };
 
-export declare const ScaleAlert: StencilReactComponent<ScaleAlertElement, ScaleAlertEvents, ScaleAlertProps>;
+export declare const ScaleAlert: StencilReactComponent<
+  ScaleAlertElement,
+  ScaleAlertEvents,
+  ScaleAlertProps
+>;
 ```
 
 ## Reproduction

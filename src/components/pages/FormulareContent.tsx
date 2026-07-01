@@ -28,11 +28,7 @@ export default function FormulareContent() {
       </p>
 
       {submitted && (
-        <ScaleAlert
-          variant="success"
-          opened
-          className="mb-6"
-        >
+        <ScaleAlert variant="success" opened className="mb-6">
           Formular erfolgreich abgesendet!
         </ScaleAlert>
       )}
@@ -49,7 +45,13 @@ export default function FormulareContent() {
                 setSubmitted(true);
               }}
             >
-              <ScaleTextField label="Vorname" onScaleBlur={() => {console.log("test")}} required />
+              <ScaleTextField
+                label="Vorname"
+                onScaleBlur={() => {
+                  console.log("test");
+                }}
+                required
+              />
               <ScaleTextField label="Nachname" required />
               <ScaleTextField label="E-Mail" type="email" required />
               <ScaleTextField label="Telefon" type="tel" />
