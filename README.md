@@ -24,7 +24,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 > **Update:** Ab `@telekom/scale-components-react@3.0.0-beta.160` ist `next/dynamic` mit `ssr: false` **nicht mehr nötig**. Das Paket liefert jetzt eine `react-server` Export-Condition, die Next.js automatisch beim SSR nutzt. Alle Pages können Scale-Komponenten direkt importieren.
 >
-> **Achtung:** beta.160 hat einen **Bug in den TypeScript-Definitionen** — der `Props`-Generic wird nicht an `StencilReactComponent` durchgereicht, sodass alle Component-Props als `Partial<{}>` aufgelöst werden. Workaround: `typescript.ignoreBuildErrors: true` in `next.config.ts`. Dieser Bug liegt im Stencil React Output Target und muss upstream gefixt werden.
+> **TypeScript-Typen (gelöst ab beta.161):** beta.160 hatte einen **Bug in den TypeScript-Definitionen** — der `Props`-Generic wurde nicht an `StencilReactComponent` durchgereicht, sodass alle Component-Props als `Partial<{}>` aufgelöst wurden. Ab `3.0.0-beta.161` ist dies behoben (die generierten Wrapper reichen jetzt `Components.*` als dritten Generic durch). Der Workaround `typescript.ignoreBuildErrors: true` in `next.config.ts` wurde entfernt.
 
 ### Hintergrund (vor beta.160)
 

@@ -3,6 +3,7 @@
 import {
   ScaleButton,
   ScaleCard,
+  ScaleSlider,
   ScaleTag,
 } from "@telekom/scale-components-react";
 import Link from "next/link";
@@ -58,6 +59,13 @@ export default function HomeContent() {
           <Link href="/formulare">
             <ScaleButton variant="secondary">Formulare ansehen</ScaleButton>
           </Link>
+
+          <div>
+            <ScaleSlider />
+          </div>
+          <div>
+            <scale-slider />
+          </div>
         </div>
       </section>
 

@@ -1,5 +1,7 @@
 ﻿# Bug: TypeScript props missing on all React wrapper components (beta.160)
 
+> **✅ RESOLVED in `3.0.0-beta.161`.** The generated `components.d.ts` now passes the third `Props` generic (`Components.*`) to `StencilReactComponent`, so all component-specific props resolve correctly. The `typescript.ignoreBuildErrors` workaround has been removed from this project. The report below is kept for historical context.
+
 ## Component
 
 `@telekom/scale-components-react@3.0.0-beta.160`

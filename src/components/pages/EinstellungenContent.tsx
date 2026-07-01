@@ -32,7 +32,6 @@ export default function EinstellungenContent() {
           variant="success"
           opened
           className="mb-6"
-          onScaleClose={() => setSaved(false)}
         >
           Einstellungen erfolgreich gespeichert!
         </ScaleAlert>

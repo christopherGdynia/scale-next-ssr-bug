@@ -99,7 +99,7 @@ export default function TeamContent() {
               <p className="text-sm text-gray-500 mb-3">{member.email}</p>
               <div className="flex flex-wrap gap-2">
                 {member.skills.map((skill) => (
-                  <ScaleTag key={skill} size="small" onScaleClose={} variant="strong">
+                  <ScaleTag key={skill} size="small" type="strong">
                     {skill}
                   </ScaleTag>
                 ))}
@@ -114,7 +114,8 @@ export default function TeamContent() {
       <h2 className="text-2xl font-semibold mb-6">Häufige Fragen</h2>
       <ScaleAccordion>
         {faqs.map((faq) => (
-          <ScaleCollapsible key={faq.question} heading={faq.question}>
+          <ScaleCollapsible key={faq.question}>
+            <span slot="heading">{faq.question}</span>
             <p className="p-4 text-gray-600">{faq.answer}</p>
           </ScaleCollapsible>
         ))}

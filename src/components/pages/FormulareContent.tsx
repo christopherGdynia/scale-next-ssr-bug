@@ -32,7 +32,6 @@ export default function FormulareContent() {
           variant="success"
           opened
           className="mb-6"
-          onScaleClose={() => setSubmitted(false)}
         >
           Formular erfolgreich abgesendet!
         </ScaleAlert>
